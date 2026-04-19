@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Brian Zinkan — AI-Native Builder</title>
+<meta name="description" content="Founding-engineer-style portfolio: production SaaS products shipped with AI-first (vibecoding) workflows. EdTech, regulatory AI, real-time platforms." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg:#0a0a0b; --panel:#111114; --ink:#e7e7ea; --muted:#9ca3af; --accent:#f97316; --accent2:#22d3ee; }
+  html,body{background:var(--bg); color:var(--ink); font-family:'Inter',ui-sans-serif,system-ui,sans-serif;}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+  .grid-bg{
+    background-image:
+      radial-gradient(1200px 600px at 10% -10%, rgba(249,115,22,.15), transparent 60%),
+      radial-gradient(900px 500px at 90% 0%, rgba(34,211,238,.10), transparent 60%),
+      linear-gradient(transparent 95%, rgba(255,255,255,.04) 95%),
+      linear-gradient(90deg, transparent 95%, rgba(255,255,255,.04) 95%);
+    background-size: auto, auto, 32px 32px, 32px 32px;
+  }
+  .chip{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .55rem;border:1px solid rgba(255,255,255,.10);border-radius:999px;font-size:.72rem;color:#cbd5e1;background:rgba(255,255,255,.03);}
+  .chip.accent{color:#fdba74;border-color:rgba(249,115,22,.35);background:rgba(249,115,22,.08);}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.08); border-radius:18px;}
+  .ring-accent{box-shadow: 0 0 0 1px rgba(249,115,22,.25), 0 10px 40px -10px rgba(249,115,22,.25);}
+  .kbd{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.72rem;background:#1a1a1f;border:1px solid rgba(255,255,255,.1);border-bottom-width:2px;border-radius:6px;padding:.08rem .38rem;color:#cbd5e1;}
+  a.link{color:#fdba74; text-decoration:underline; text-underline-offset:3px;}
+  .divider{height:1px;background:linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);}
+  img.shot{border:1px solid rgba(255,255,255,.08); border-radius:10px; background:#000;}
+  details > summary { cursor:pointer; list-style:none; }
+  details > summary::-webkit-details-marker { display:none; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- NAV -->
+<header class="sticky top-0 z-40 backdrop-blur bg-black/40 border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 font-semibold">
+      <span class="inline-block w-2.5 h-2.5 rounded-full" style="background:var(--accent)"></span>
+      Brian Zinkan
+      <span class="text-xs text-gray-400 ml-1 mono">// vibe-coded</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+      <a href="#work" class="hover:text-white">Work</a>
+      <a href="#how" class="hover:text-white">How I build</a>
+      <a href="#stack" class="hover:text-white">Stack</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
+    <a href="#contact" class="text-sm px-3 py-1.5 rounded-lg border border-white/10 hover:border-white/30">Hire me →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="grid-bg">
+  <div class="max-w-6xl mx-auto px-5 pt-20 pb-24">
+    <div class="flex gap-2 mb-6">
+      <span class="chip accent">● Available for founding / senior roles</span>
+      <span class="chip">AI-native · Full-stack · Ship-fast</span>
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
+      I ship production SaaS<br/>
+      <span class="bg-clip-text text-transparent" style="background-image:linear-gradient(90deg,#f97316,#fb923c,#22d3ee)">at vibecoding speed.</span>
+    </h1>
+    <p class="mt-6 text-lg text-gray-300 max-w-2xl">
+      Founding-engineer-style builder. In the last year I've shipped four production-grade platforms across EdTech and
+      regulatory AI — from multi-agent LLM orchestration to real-time classroom infrastructure running on AWS Fargate.
+      I use AI as a co-pilot across the entire stack: design, code, infra, docs.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#work" class="px-4 py-2.5 rounded-lg bg-orange-500 hover:bg-orange-400 text-black font-semibold">See the work</a>
+      <a href="#contact" class="px-4 py-2.5 rounded-lg border border-white/15 hover:border-white/30">Get in touch</a>
+      <a href="#how" class="px-4 py-2.5 rounded-lg border border-white/15 hover:border-white/30">How I work</a>
+    </div>
+
+    <!-- CURRENTLY BUILDING -->
+    <div class="mt-10 card p-4 flex items-center gap-3 border-cyan-500/20" style="background:linear-gradient(90deg, rgba(34,211,238,.06), transparent 60%);">
+      <span class="relative flex h-2.5 w-2.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400"></span>
+      </span>
+      <span class="text-sm text-gray-300"><b class="text-cyan-300">Now shipping:</b> Inngest durable execution in Lulia (8 functions, step-level retries) · WISP + HECVAT security program for SchoolPilot · Expanding Civix beyond Ohio</span>
+    </div>
+
+    <!-- KPIs -->
+    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="card p-5">
+        <div class="text-3xl font-bold">4</div>
+        <div class="text-sm text-gray-400">production platforms shipped</div>
+      </div>
+      <div class="card p-5">
+        <div class="text-3xl font-bold">16</div>
+        <div class="text-sm text-gray-400">AI agents + 8 Inngest functions</div>
+      </div>
+      <div class="card p-5">
+        <div class="text-3xl font-bold">1.21M</div>
+        <div class="text-sm text-gray-400">education standards in pgvector</div>
+      </div>
+      <div class="card p-5">
+        <div class="text-3xl font-bold">3→1</div>
+        <div class="text-sm text-gray-400">products unified under one SaaS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK HEADER -->
+<section id="work" class="max-w-6xl mx-auto px-5 pt-16 pb-8">
+  <div class="flex items-end justify-between gap-6 flex-wrap">
+    <div>
+      <div class="text-xs uppercase tracking-widest text-orange-400 mono">/ selected work</div>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2">Three case studies. Real products.</h2>
+      <p class="text-gray-400 mt-2 max-w-2xl">Each one shipped end-to-end — schema, backend, frontend, AI orchestration, infra, CI/CD, and docs. Pick one to dive in.</p>
+    </div>
+    <div class="flex gap-2 text-xs text-gray-400">
+      <span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">Postgres + pgvector</span><span class="chip">AWS Fargate</span><span class="chip">Next.js</span><span class="chip">FastAPI</span>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 1: LULIA -->
+<section class="max-w-6xl mx-auto px-5 py-10">
+  <article class="card ring-accent p-6 md:p-10">
+    <div class="flex flex-wrap items-center gap-2 mb-4">
+      <span class="chip accent">Headline project</span>
+      <span class="chip">AI-native EdTech</span>
+      <span class="chip">Inngest · CrewAI · Claude · Gemini · Bedrock</span>
+    </div>
+    <h3 class="text-3xl md:text-4xl font-bold tracking-tight">Lulia — an AI teaching partner that replaces the &ldquo;Teachers Pay Teachers&rdquo; grind</h3>
+    <p class="text-gray-300 mt-4 max-w-3xl">
+      Teachers burn hours each week building lesson plans and hunting worksheets on marketplaces. Lulia ingests a teacher's
+      curriculum and auto-generates standards-aligned lessons, scaffolded worksheets, activities, games, and even narrated
+      videos — with accommodations baked in (IEP / 504 / ELL / Gifted) and a generation history that refuses to repeat itself.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <div>
+        <div class="mono text-xs text-orange-400">PROBLEM</div>
+        <p class="text-sm text-gray-300 mt-2">Fragmented content, $200K+ district spend on third-party marketplaces, and no way to guarantee standards alignment or non-repetition across a school year.</p>
+      </div>
+      <div>
+        <div class="mono text-xs text-orange-400">APPROACH</div>
+        <p class="text-sm text-gray-300 mt-2">Five CrewAI crews (16 agents) orchestrate pedagogy, visuals, and QA. A three-tier standards router (Custom › State › National) does dense retrieval over 1.21M standards in pgvector with LLM judgment.</p>
+      </div>
+      <div>
+        <div class="mono text-xs text-orange-400">OUTCOME</div>
+        <p class="text-sm text-gray-300 mt-2">Pre-production on AWS (ECS Fargate + RDS + S3 + SQS + Bedrock). 26 shipped phases, 22 content templates, 7 design themes, 15/15 tests green, CHANGELOG-disciplined.</p>
+      </div>
+    </div>
+
+    <div class="divider my-8"></div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h4 class="font-semibold text-lg">Architecture highlights</h4>
+        <ul class="mt-3 space-y-2 text-sm text-gray-300 list-disc list-inside marker:text-orange-400">
+          <li><b>Durable execution (Inngest):</b> 8 Inngest functions orchestrate plan approval, video upload processing (8 checkpointed steps), clip generation (Veo 3), and video crew pipelines — with step-level memoization, declarative concurrency limits, and automatic retries. Replaced all daemon threads. 3 cron jobs handle stale-game cleanup, analytics rollup, and webhook purge.</li>
+          <li><b>Multi-agent orchestration:</b> 5 CrewAI crews — Curriculum, Lesson, Assets, Video, QA — each with specialist agents, now triggered via Inngest events.</li>
+          <li><b>Multi-LLM routing:</b> Claude for reasoning, Gemini 2.5 Flash for Slides/Forms/video, Haiku for classification, AWS Bedrock for embeddings. Fallback policies on every call.</li>
+          <li><b>Deterministic overlays:</b> SHA-256 fingerprinting of prior generations prevents repetition; template + theme system guarantees visual consistency.</li>
+          <li><b>Video pipeline:</b> 8-step Inngest workflow: ffprobe → thumbnail → AWS Transcribe (polled) → transcript embedding into pgvector → Haiku classification → standards alignment → persist. Concurrency-limited to 3.</li>
+          <li><b>Real-time layer:</b> FastAPI WebSockets + Redis power live classroom games.</li>
+          <li><b>Media pipeline:</b> Replicate Flux for avatars, Polly + ElevenLabs TTS, ffmpeg video assembly, Veo 3 Fast clips.</li>
+          <li><b>Google integration:</b> OAuth into Classroom, Slides, Forms, Drive, Calendar.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-lg">Stack</h4>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="chip">FastAPI · Python 3.12</span>
+          <span class="chip">Next.js 14 · Tailwind</span>
+          <span class="chip">Postgres 16 + pgvector (HNSW)</span>
+          <span class="chip">40+ SQLAlchemy models</span>
+          <span class="chip">Inngest (8 functions · durable)</span>
+          <span class="chip">CrewAI · 16 agents</span>
+          <span class="chip">Claude / Gemini / Haiku / Bedrock</span>
+          <span class="chip">Veo 3 Fast (clips)</span>
+          <span class="chip">Redis · WebSockets</span>
+          <span class="chip">S3 / MinIO (6 buckets)</span>
+          <span class="chip">Stripe subs + credits</span>
+          <span class="chip">ECS Fargate · RDS · SQS · SES</span>
+          <span class="chip">GitHub Actions CI/CD</span>
+        </div>
+
+        <h4 class="font-semibold text-lg mt-6">Signals of rigor</h4>
+        <ul class="mt-3 space-y-2 text-sm text-gray-300 list-disc list-inside marker:text-cyan-400">
+          <li>CHANGELOG documenting all 26 phases</li>
+          <li>9 internal Claude Code skills for repeatable workflows</li>
+          <li>1,841-paragraph architecture doc</li>
+          <li>pytest suite green (15/15)</li>
+          <li>Dignity-first accommodation engine</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- CASE 2: CIVIX -->
+<section class="max-w-6xl mx-auto px-5 py-10">
+  <article class="card p-6 md:p-10">
+    <div class="flex flex-wrap items-center gap-2 mb-4">
+      <span class="chip">Regulatory AI</span>
+      <span class="chip">Hybrid LLM + rules engine</span>
+      <span class="chip">Next.js · Prisma · AWS Fargate</span>
+    </div>
+    <h3 class="text-3xl md:text-4xl font-bold tracking-tight">Civix — turning fragmented ordinances into defensible answers</h3>
+    <p class="text-gray-300 mt-4 max-w-3xl">
+      Property owners, contractors, and small businesses can't get a straight answer on zoning, permitting, or animal
+      regulation without hiring a lawyer. Civix scrapes and normalizes local ordinances across jurisdictions and runs them
+      through a <em>hybrid</em> system: LLMs handle natural-language intake, a deterministic rules engine
+      (<span class="mono">PROHIBITED › RESTRICTED › CONDITIONAL › ALLOWED</span>) produces the actual answer.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <div>
+        <div class="mono text-xs text-orange-400">WHY HYBRID</div>
+        <p class="text-sm text-gray-300 mt-2">LLMs are great at intake and disambiguation. They're not great at "will this decision hold up." A deterministic layer gives reproducibility and audit trails customers can cite.</p>
+      </div>
+      <div>
+        <div class="mono text-xs text-orange-400">DATA PIPELINE</div>
+        <p class="text-sm text-gray-300 mt-2">Ingests via Municode API, ScrapingBee, and AmLegal; embeds into a RAG store; layers jurisdiction-specific rulesets. 20+ Prisma models map zoning, permits, scrape jobs, and rules.</p>
+      </div>
+      <div>
+        <div class="mono text-xs text-orange-400">BUSINESS MODEL</div>
+        <p class="text-sm text-gray-300 mt-2">Free tier builds trust with plain-language answers; paid tier sells compliance-ready PDF reports. Stripe + NextAuth + JWT.</p>
+      </div>
+    </div>
+
+    <div class="divider my-8"></div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h4 class="font-semibold text-lg">Engineering highlights</h4>
+        <ul class="mt-3 space-y-2 text-sm text-gray-300 list-disc list-inside marker:text-orange-400">
+          <li>Multi-provider AI routing: Gemini primary, Claude + OpenAI fallbacks.</li>
+          <li>AWS Fargate migration completed — documented in a runbook.</li>
+          <li>GitHub Actions CI: lint, type-check, Jest.</li>
+          <li>Seeded sample data for Cincinnati metro; ready to expand jurisdiction by jurisdiction.</li>
+          <li>Built-in <span class="mono">/dashboard/tester</span> harness for rules-engine QA.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-lg">Stack</h4>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="chip">Next.js 14 App Router</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">Prisma · Postgres (Neon/RDS)</span>
+          <span class="chip">NextAuth 5 + JWT</span>
+          <span class="chip">Stripe</span>
+          <span class="chip">Gemini · Claude · OpenAI</span>
+          <span class="chip">Docker · Fargate · S3</span>
+          <span class="chip">GitHub Actions</span>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- CASE 3: SCHOOLPILOT SUITE -->
+<section class="max-w-6xl mx-auto px-5 py-10">
+  <article class="card p-6 md:p-10">
+    <div class="flex flex-wrap items-center gap-2 mb-4">
+      <span class="chip">EdTech SaaS suite</span>
+      <span class="chip">Real-time · WebRTC · Socket.io</span>
+      <span class="chip">Capacitor iOS/Android</span>
+      <span class="chip accent">WISP · HECVAT · FERPA/COPPA</span>
+    </div>
+    <h3 class="text-3xl md:text-4xl font-bold tracking-tight">SchoolPilot — unifying three K-12 products into one platform</h3>
+    <p class="text-gray-300 mt-4 max-w-3xl">
+      Schools juggle separate tools for classroom monitoring, hall passes, and student dismissal. I built all three
+      (ClassPilot, PassPilot, GoPilot) and then consolidated them under a single tenant-aware SaaS, SchoolPilot — with
+      unified auth, tiered per-product pricing, shared real-time infra, and an integrated admin.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <div class="card p-4">
+        <div class="text-sm text-orange-400 mono">ClassPilot</div>
+        <div class="font-semibold mt-1">Classroom monitoring</div>
+        <p class="text-xs text-gray-400 mt-2">Live WebRTC screen streaming of managed Chromebooks, web filtering, device locking. v2.3.4 → v2.3.6 released. COPPA/FERPA docs shipped.</p>
+      </div>
+      <div class="card p-4">
+        <div class="text-sm text-orange-400 mono">PassPilot</div>
+        <div class="font-semibold mt-1">Digital hall passes</div>
+        <p class="text-xs text-gray-400 mt-2">Mobile-first (Capacitor iOS/Android) with kiosk mode, Google Classroom sync, real-time tracking. Monorepo: shared types / client / server.</p>
+      </div>
+      <div class="card p-4">
+        <div class="text-sm text-orange-400 mono">GoPilot</div>
+        <div class="font-semibold mt-1">Dismissal / pickup</div>
+        <p class="text-xs text-gray-400 mt-2">Bus + car-line orchestration with a parent app, scheduled auto-start, and live teacher dashboards. Socket.io-powered.</p>
+      </div>
+    </div>
+
+    <div class="divider my-8"></div>
+
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h4 class="font-semibold text-lg">Integration challenges solved</h4>
+        <ul class="mt-3 space-y-2 text-sm text-gray-300 list-disc list-inside marker:text-cyan-400">
+          <li>One unified Express + TypeScript API serving three domains, with role-based access and per-product license gating.</li>
+          <li>Two real-time channels live side by side: Socket.io for GoPilot, raw WebSocket for ClassPilot devices.</li>
+          <li>URL rewrite layer maps legacy product routes to canonical endpoints so existing clients keep working.</li>
+          <li>Scheduler layer handles dismissal auto-start, daily rollups, and heartbeat purge.</li>
+          <li>Tiered pricing logic across product bundles with discount rules.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-lg">Stack</h4>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="chip">React + Vite</span>
+          <span class="chip">Express + TypeScript</span>
+          <span class="chip">Drizzle ORM</span>
+          <span class="chip">Postgres 16 + Redis 7</span>
+          <span class="chip">Socket.io + WebSocket</span>
+          <span class="chip">WebRTC (ClassPilot)</span>
+          <span class="chip">Capacitor (iOS/Android)</span>
+          <span class="chip">Docker · AWS Fargate</span>
+          <span class="chip">Google OAuth / Classroom</span>
+          <span class="chip">Stripe · SendGrid</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider my-8"></div>
+
+    <!-- SECURITY SECTION -->
+    <div>
+      <h4 class="font-semibold text-lg">Security &amp; compliance program</h4>
+      <p class="text-sm text-gray-400 mt-2">When you sell to schools, security isn't a nice-to-have — it's gate one of every procurement process. I built the security posture alongside the product, not as an afterthought.</p>
+
+      <div class="grid md:grid-cols-3 gap-5 mt-6">
+        <div class="card p-4">
+          <div class="text-sm text-cyan-400 mono">WISP</div>
+          <div class="font-semibold mt-1">Written Information Security Program</div>
+          <p class="text-xs text-gray-400 mt-2">Annual review cycle with triggers for material system changes, security incidents, and regulatory shifts. Data classification (Restricted / Confidential / Public), 72-hour incident notification SLA, and severity-tiered response (Critical → pager, High → same-day, Medium → 7-day, Low → 30-day).</p>
+        </div>
+        <div class="card p-4">
+          <div class="text-sm text-cyan-400 mono">HECVAT Lite</div>
+          <div class="font-semibold mt-1">Vendor security self-assessment</div>
+          <p class="text-xs text-gray-400 mt-2">Completed for EdTech procurement. References iKeepSafe FERPA/COPPA certification (pending). Covers "school official" status under FERPA, COPPA school-consent exception, no-data-mining clause, and prohibition on student data for advertising or AI training.</p>
+        </div>
+        <div class="card p-4">
+          <div class="text-sm text-cyan-400 mono">Security monitor</div>
+          <div class="font-semibold mt-1">Real-time threat detection</div>
+          <p class="text-xs text-gray-400 mt-2">Deterministic rule engine (no LLM) running every 5 minutes: failed auth spikes, bulk student writes, off-hours admin bursts, cross-school access. Results land in <span class="mono">security_events</span> with severity + resolution audit trails. 30-min dedup prevents alert spam.</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mt-5">
+        <div>
+          <h5 class="font-semibold text-sm mt-2">Authentication &amp; encryption</h5>
+          <ul class="mt-2 space-y-1 text-xs text-gray-300 list-disc list-inside marker:text-cyan-400">
+            <li>Dual auth: Bearer JWT + session cookies (7-day rolling, 1-hr admin idle timeout)</li>
+            <li>RBAC: admin, school_admin, teacher, office_staff, parent, super_admin</li>
+            <li>Account lockout (10 failures / 15 min) + IP rate limiting (15 / 15 min)</li>
+            <li>TLS 1.2+, HSTS, AES-256 at rest (AWS), AES-GCM for OAuth tokens</li>
+            <li>MFA required for super_admin + AWS production access</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-semibold text-sm mt-2">Audit &amp; hardening</h5>
+          <ul class="mt-2 space-y-1 text-xs text-gray-300 list-disc list-inside marker:text-cyan-400">
+            <li><span class="mono">audit_logs</span> table: all admin actions, 2-year retention, indexed for efficient query</li>
+            <li>Helmet.js (CSP, X-Frame, X-Content-Type, Referrer-Policy), CSRF tokens</li>
+            <li>Parameterized queries via Drizzle ORM (SQL injection prevention)</li>
+            <li>Network isolation: ECS in private VPC, RDS not publicly accessible</li>
+            <li><span class="mono">npm audit</span> on critical-level blocks production deploys</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <h4 class="font-semibold text-lg">Gallery</h4>
+      <p class="text-sm text-gray-400 mt-1">A few real screens from the product suite.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
+        <img class="shot" src="assets/classpilot-dashboard.png" alt="ClassPilot teacher dashboard" />
+        <img class="shot" src="assets/classpilot-offtask.png" alt="ClassPilot off-task detection" />
+        <img class="shot" src="assets/passpilot-dashboard.png" alt="PassPilot dashboard" />
+        <img class="shot" src="assets/passpilot-kiosk.png" alt="PassPilot kiosk mode" />
+        <img class="shot" src="assets/gopilot-teacher.png" alt="GoPilot teacher dashboard" />
+        <img class="shot" src="assets/gopilot-buspickup.png" alt="GoPilot bus pickup" />
+        <img class="shot" src="assets/gopilot-parent.png" alt="GoPilot parent app" />
+        <img class="shot" src="assets/schoolpilot-admin.png" alt="SchoolPilot admin" />
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- HOW I BUILD -->
+<section id="how" class="max-w-6xl mx-auto px-5 py-20">
+  <div class="text-xs uppercase tracking-widest text-orange-400 mono">/ how I build</div>
+  <h2 class="text-3xl md:text-4xl font-bold mt-2">Vibecoding, but production-grade.</h2>
+  <p class="text-gray-300 mt-3 max-w-3xl">
+    I treat AI as a full collaborator — not a gimmick. Every project above was shipped with AI-first workflows:
+    planning docs in markdown, agentic code-gen where it saves time, and a disciplined human-in-the-loop for architecture,
+    security, and product decisions. The result is founder-speed without YOLO-quality.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-5 mt-10">
+    <div class="card p-5">
+      <div class="text-orange-400 mono text-xs">01 · Plan in markdown</div>
+      <h4 class="font-semibold mt-1">ARCHITECTURE.md first</h4>
+      <p class="text-sm text-gray-300 mt-2">Before a line of code, I write the architecture, data model, and rollout plan. This is the context the AI actually needs to stop guessing.</p>
+    </div>
+    <div class="card p-5">
+      <div class="text-orange-400 mono text-xs">02 · Agents for grunt work</div>
+      <h4 class="font-semibold mt-1">Deterministic rails</h4>
+      <p class="text-sm text-gray-300 mt-2">Code-gen for scaffolds, schemas, tests, and docs. Deterministic rules wherever correctness matters. LLMs never get the last word on policy.</p>
+    </div>
+    <div class="card p-5">
+      <div class="text-orange-400 mono text-xs">03 · Ship on infra</div>
+      <h4 class="font-semibold mt-1">Docker → Fargate</h4>
+      <p class="text-sm text-gray-300 mt-2">Every repo ends up dockerized with a documented AWS path. Runbooks, CI/CD, seeds. Nothing is "works on my machine."</p>
+    </div>
+    <div class="card p-5">
+      <div class="text-orange-400 mono text-xs">04 · CHANGELOG discipline</div>
+      <h4 class="font-semibold mt-1">Versioned releases</h4>
+      <p class="text-sm text-gray-300 mt-2">ClassPilot shipped v2.3.4 → v2.3.6 as real zipped releases. Lulia's CHANGELOG walks through 26 phases. Traceable work, every week.</p>
+    </div>
+    <div class="card p-5">
+      <div class="text-orange-400 mono text-xs">05 · Security-first</div>
+      <h4 class="font-semibold mt-1">WISP · HECVAT · FERPA/COPPA</h4>
+      <p class="text-sm text-gray-300 mt-2">SchoolPilot ships with a Written Information Security Program, HECVAT Lite self-assessment, a real-time security monitor, and 2-year audit logging. Privacy isn't a checkbox — it's the gate schools use to say yes or no.</p>
+    </div>
+    <div class="card p-5">
+      <div class="text-orange-400 mono text-xs">06 · Repeatable skills</div>
+      <h4 class="font-semibold mt-1">Internal toolchains</h4>
+      <p class="text-sm text-gray-300 mt-2">Lulia alone has 9 internal Claude Code skills. I package recurring patterns so every new feature gets faster — not slower.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section id="stack" class="max-w-6xl mx-auto px-5 py-10">
+  <div class="text-xs uppercase tracking-widest text-orange-400 mono">/ stack</div>
+  <h2 class="text-3xl md:text-4xl font-bold mt-2">What's in my toolbelt</h2>
+  <div class="grid md:grid-cols-4 gap-6 mt-8 text-sm">
+    <div>
+      <div class="text-gray-400 mono text-xs mb-2">FRONTEND</div>
+      <div class="flex flex-wrap gap-2"><span class="chip">Next.js 14</span><span class="chip">React 18</span><span class="chip">Vite</span><span class="chip">Tailwind</span><span class="chip">Radix / shadcn</span><span class="chip">Capacitor</span></div>
+    </div>
+    <div>
+      <div class="text-gray-400 mono text-xs mb-2">BACKEND</div>
+      <div class="flex flex-wrap gap-2"><span class="chip">Node + Express</span><span class="chip">TypeScript</span><span class="chip">FastAPI (Py 3.12)</span><span class="chip">Drizzle</span><span class="chip">Prisma</span><span class="chip">SQLAlchemy</span></div>
+    </div>
+    <div>
+      <div class="text-gray-400 mono text-xs mb-2">DATA · REAL-TIME</div>
+      <div class="flex flex-wrap gap-2"><span class="chip">Postgres 16</span><span class="chip">pgvector (HNSW)</span><span class="chip">Redis</span><span class="chip">Socket.io</span><span class="chip">WebSocket</span><span class="chip">WebRTC</span></div>
+    </div>
+    <div>
+      <div class="text-gray-400 mono text-xs mb-2">ORCHESTRATION</div>
+      <div class="flex flex-wrap gap-2"><span class="chip">Inngest (durable execution)</span><span class="chip">CrewAI (multi-agent)</span><span class="chip">Step functions</span><span class="chip">Fan-out / retries</span><span class="chip">Cron scheduling</span></div>
+    </div>
+    <div>
+      <div class="text-gray-400 mono text-xs mb-2">AI · ML</div>
+      <div class="flex flex-wrap gap-2"><span class="chip">Claude</span><span class="chip">Gemini 2.5</span><span class="chip">OpenAI</span><span class="chip">AWS Bedrock</span><span class="chip">RAG (pgvector)</span><span class="chip">Veo 3 (video gen)</span></div>
+    </div>
+    <div>
+      <div class="text-gray-400 mono text-xs mb-2">AWS</div>
+      <div class="flex flex-wrap gap-2"><span class="chip">ECS / Fargate</span><span class="chip">RDS</span><span class="chip">S3</span><span class="chip">CloudFront</span><span class="chip">ECR</span><span class="chip">SQS</span><span class="chip">SES</span><span class="chip">Lambda</span><span class="chip">Bedrock</span><span class="chip">Transcribe</span><span class="chip">ALB</span><span class="chip">Polly</span></div>
+    </div>
+    <div>
+      <div class="text-gray-400 mono text-xs mb-2">INFRA · CI/CD</div>
+      <div class="flex flex-wrap gap-2"><span class="chip">Docker</span><span class="chip">docker-compose</span><span class="chip">GitHub Actions</span><span class="chip">Dockerfile (multi-stage)</span></div>
+    </div>
+    <div>
+      <div class="text-gray-400 mono text-xs mb-2">AUTH · PAY</div>
+      <div class="flex flex-wrap gap-2"><span class="chip">NextAuth + JWT</span><span class="chip">Passport + Google OAuth</span><span class="chip">Stripe subs + credits</span><span class="chip">SendGrid</span></div>
+    </div>
+    <div>
+      <div class="text-gray-400 mono text-xs mb-2">MEDIA</div>
+      <div class="flex flex-wrap gap-2"><span class="chip">Replicate Flux</span><span class="chip">ElevenLabs</span><span class="chip">AWS Polly</span><span class="chip">ffmpeg</span><span class="chip">Remotion</span><span class="chip">Veo 3 Fast</span></div>
+    </div>
+    <div>
+      <div class="text-gray-400 mono text-xs mb-2">SECURITY · COMPLIANCE</div>
+      <div class="flex flex-wrap gap-2"><span class="chip">COPPA</span><span class="chip">FERPA</span><span class="chip">WISP</span><span class="chip">HECVAT Lite</span><span class="chip">Audit logging</span><span class="chip">Security monitor</span><span class="chip">AES-256 / TLS 1.2+</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / CONTACT -->
+<section id="contact" class="max-w-6xl mx-auto px-5 py-20">
+  <div class="card p-8 md:p-12">
+    <div class="text-xs uppercase tracking-widest text-orange-400 mono">/ let's build</div>
+    <h2 class="text-3xl md:text-4xl font-bold mt-2">Looking for a founding or senior role.</h2>
+    <p class="text-gray-300 mt-3 max-w-3xl">
+      Best fit: AI-native startups, EdTech, regulatory / compliance SaaS, or any team where shipping speed matters and
+      the codebase needs someone who's equally comfortable in schema design, AI orchestration, real-time infra, and
+      product calls. Remote or hybrid.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-5 mt-8">
+      <a href="mailto:zinkan.brian@gmail.com" class="card p-5 hover:border-orange-400/50 transition block">
+        <div class="text-orange-400 mono text-xs">EMAIL</div>
+        <div class="font-semibold mt-1">zinkan.brian@gmail.com</div>
+        <div class="text-sm text-gray-400 mt-2">Fastest way to reach me.</div>
+      </a>
+      <div class="card p-5">
+        <div class="text-orange-400 mono text-xs">AVAILABILITY</div>
+        <div class="font-semibold mt-1">Open to new roles</div>
+        <div class="text-sm text-gray-400 mt-2">Founding engineer, senior full-stack, AI platform builder, technical co-founder.</div>
+      </div>
+      <div class="card p-5">
+        <div class="text-orange-400 mono text-xs">LOCATION</div>
+        <div class="font-semibold mt-1">Remote / US</div>
+        <div class="text-sm text-gray-400 mt-2">Happy to travel for founding-team in-person sprints.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="max-w-6xl mx-auto px-5 py-10 text-xs text-gray-500 flex items-center justify-between flex-wrap gap-3">
+  <div>© 2026 Brian Zinkan · <span class="mono">vibe-coded with care</span> · <span class="mono text-gray-600">v1.1</span></div>
+  <div class="flex gap-2"><span class="kbd">ESC</span> to chill</div>
+</footer>
+
+</body>
+</html>
