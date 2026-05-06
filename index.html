@@ -65,8 +65,8 @@
       <span class="bg-clip-text text-transparent" style="background-image:linear-gradient(90deg,#f97316,#fb923c,#22d3ee)">at vibecoding speed.</span>
     </h1>
     <p class="mt-6 text-lg text-gray-300 max-w-2xl">
-      Founding-engineer-style builder. In the last year I've shipped four production-grade platforms across EdTech and
-      regulatory AI — from multi-agent LLM orchestration to real-time classroom infrastructure running on AWS Fargate.
+      Founding-engineer-style builder. In the last year I've shipped five production-grade platforms across EdTech,
+      regulatory AI, and citizen science — from multi-agent LLM orchestration to real-time classroom infrastructure on AWS and GCP.
       I use AI as a co-pilot across the entire stack: design, code, infra, docs.
     </p>
 
@@ -82,13 +82,13 @@
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
         <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400"></span>
       </span>
-      <span class="text-sm text-gray-300"><b class="text-cyan-300">Now shipping:</b> Inngest durable execution in Lulia (8 functions, step-level retries) · WISP + HECVAT security program for SchoolPilot · Expanding Civix beyond Ohio</span>
+      <span class="text-sm text-gray-300"><b class="text-cyan-300">Now shipping:</b> Inngest durable execution in Lulia (8 functions, step-level retries) · WISP + HECVAT security program for SchoolPilot · Gordi multi-jurisdiction expansion · Dragonfly citizen science app on GCP</span>
     </div>
 
     <!-- KPIs -->
     <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
       <div class="card p-5">
-        <div class="text-3xl font-bold">4</div>
+        <div class="text-3xl font-bold">5</div>
         <div class="text-sm text-gray-400">production platforms shipped</div>
       </div>
       <div class="card p-5">
@@ -112,11 +112,11 @@
   <div class="flex items-end justify-between gap-6 flex-wrap">
     <div>
       <div class="text-xs uppercase tracking-widest text-orange-400 mono">/ selected work</div>
-      <h2 class="text-3xl md:text-4xl font-bold mt-2">Three case studies. Real products.</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2">Four case studies. Real products.</h2>
       <p class="text-gray-400 mt-2 max-w-2xl">Each one shipped end-to-end — schema, backend, frontend, AI orchestration, infra, CI/CD, and docs. Pick one to dive in.</p>
     </div>
     <div class="flex gap-2 text-xs text-gray-400">
-      <span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">Postgres + pgvector</span><span class="chip">AWS Fargate</span><span class="chip">Next.js</span><span class="chip">FastAPI</span>
+      <span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">Postgres + pgvector</span><span class="chip">AWS Fargate</span><span class="chip">GCP Cloud Run</span><span class="chip">Next.js</span><span class="chip">FastAPI</span>
     </div>
   </div>
 </section>
@@ -198,20 +198,21 @@
   </article>
 </section>
 
-<!-- CASE 2: CIVIX -->
+<!-- CASE 2: GORDI -->
 <section class="max-w-6xl mx-auto px-5 py-10">
   <article class="card p-6 md:p-10">
     <div class="flex flex-wrap items-center gap-2 mb-4">
       <span class="chip">Regulatory AI</span>
-      <span class="chip">Hybrid LLM + rules engine</span>
-      <span class="chip">Next.js · Prisma · AWS Fargate</span>
+      <span class="chip">Hybrid LLM + deterministic rules</span>
+      <span class="chip">Next.js · Prisma · PostGIS · Inngest · AWS Fargate</span>
     </div>
-    <h3 class="text-3xl md:text-4xl font-bold tracking-tight">Civix — turning fragmented ordinances into defensible answers</h3>
+    <h3 class="text-3xl md:text-4xl font-bold tracking-tight">Gordi — turning fragmented ordinances into defensible answers</h3>
     <p class="text-gray-300 mt-4 max-w-3xl">
       Property owners, contractors, and small businesses can't get a straight answer on zoning, permitting, or animal
-      regulation without hiring a lawyer. Civix scrapes and normalizes local ordinances across jurisdictions and runs them
+      regulation without hiring a lawyer. Gordi scrapes and normalizes local ordinances across jurisdictions and runs them
       through a <em>hybrid</em> system: LLMs handle natural-language intake, a deterministic rules engine
       (<span class="mono">PROHIBITED › RESTRICTED › CONDITIONAL › ALLOWED</span>) produces the actual answer.
+      Now live across five cities with real-time ordinance monitoring and paid compliance reports.
     </p>
 
     <div class="grid md:grid-cols-3 gap-6 mt-8">
@@ -220,12 +221,12 @@
         <p class="text-sm text-gray-300 mt-2">LLMs are great at intake and disambiguation. They're not great at "will this decision hold up." A deterministic layer gives reproducibility and audit trails customers can cite.</p>
       </div>
       <div>
-        <div class="mono text-xs text-orange-400">DATA PIPELINE</div>
-        <p class="text-sm text-gray-300 mt-2">Ingests via Municode API, ScrapingBee, and AmLegal; embeds into a RAG store; layers jurisdiction-specific rulesets. 20+ Prisma models map zoning, permits, scrape jobs, and rules.</p>
+        <div class="mono text-xs text-orange-400">MULTI-JURISDICTION</div>
+        <p class="text-sm text-gray-300 mt-2">Live coverage across Denver, Boston, Washington DC, NYC, and Seattle with architect-tier scaling. Domains: animal regulations, zoning, fence rules, and permitting workflows.</p>
       </div>
       <div>
         <div class="mono text-xs text-orange-400">BUSINESS MODEL</div>
-        <p class="text-sm text-gray-300 mt-2">Free tier builds trust with plain-language answers; paid tier sells compliance-ready PDF reports. Stripe + NextAuth + JWT.</p>
+        <p class="text-sm text-gray-300 mt-2">Free tier (yes/no answers) builds trust; paid compliance reports ($9.99–$49.99) + permit workflows generate revenue. Stripe, Resend, UTM + referral acquisition tracking.</p>
       </div>
     </div>
 
@@ -235,11 +236,11 @@
       <div>
         <h4 class="font-semibold text-lg">Engineering highlights</h4>
         <ul class="mt-3 space-y-2 text-sm text-gray-300 list-disc list-inside marker:text-orange-400">
-          <li>Multi-provider AI routing: Gemini primary, Claude + OpenAI fallbacks.</li>
-          <li>AWS Fargate migration completed — documented in a runbook.</li>
-          <li>GitHub Actions CI: lint, type-check, Jest.</li>
-          <li>Seeded sample data for Cincinnati metro; ready to expand jurisdiction by jurisdiction.</li>
-          <li>Built-in <span class="mono">/dashboard/tester</span> harness for rules-engine QA.</li>
+          <li><b>PostGIS + S3 polygon storage</b> for zoning/parcel geospatial lookup — query any address against jurisdiction boundaries.</li>
+          <li><b>Real-time ordinance monitoring</b> (Phase 10): tracks new laws and alerts businesses based on severity and domain match.</li>
+          <li><b>Inngest for async workflows:</b> durable ordinance ingestion, report generation, and monitoring pipelines. Upstash Redis for rate limiting.</li>
+          <li><b>Multi-provider AI:</b> Claude, Gemini, Bedrock — with fallback policies on every call.</li>
+          <li>GitHub Actions CI: lint, type-check, Jest. Built-in <span class="mono">/dashboard/tester</span> harness for rules-engine QA.</li>
         </ul>
       </div>
       <div>
@@ -247,11 +248,13 @@
         <div class="flex flex-wrap gap-2 mt-3">
           <span class="chip">Next.js 14 App Router</span>
           <span class="chip">TypeScript</span>
-          <span class="chip">Prisma · Postgres (Neon/RDS)</span>
+          <span class="chip">Prisma · Postgres + PostGIS</span>
+          <span class="chip">Inngest (async workflows)</span>
+          <span class="chip">Upstash Redis</span>
           <span class="chip">NextAuth 5 + JWT</span>
-          <span class="chip">Stripe</span>
-          <span class="chip">Gemini · Claude · OpenAI</span>
-          <span class="chip">Docker · Fargate · S3</span>
+          <span class="chip">Stripe · Resend</span>
+          <span class="chip">Claude · Gemini · Bedrock</span>
+          <span class="chip">Docker · Fargate · ECR · S3</span>
           <span class="chip">GitHub Actions</span>
         </div>
       </div>
@@ -389,6 +392,82 @@
   </article>
 </section>
 
+<!-- CASE 4: DRAGONFLY -->
+<section class="max-w-6xl mx-auto px-5 py-10">
+  <article class="card p-6 md:p-10">
+    <div class="flex flex-wrap items-center gap-2 mb-4">
+      <span class="chip accent">Active build</span>
+      <span class="chip">Citizen science · Kids 9–12</span>
+      <span class="chip">GCP-native · FastAPI · Expo</span>
+    </div>
+    <h3 class="text-3xl md:text-4xl font-bold tracking-tight">Dragonfly — gamified nature exploration for kids</h3>
+    <p class="text-gray-300 mt-4 max-w-3xl">
+      A mobile-first field app that turns real nature observations into iNaturalist submissions, fills a personal
+      Pokédex-style "Dex," claims map territory, and drives class/friend-group leaderboards. Invite-only, built for
+      ages 9–12 with strict child safety constraints — no runtime LLM calls, async moderation, and graceful degradation
+      when external services are unavailable.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <div>
+        <div class="mono text-xs text-orange-400">PROBLEM</div>
+        <p class="text-sm text-gray-300 mt-2">Kids are glued to screens. Existing nature apps are built for adults. Teachers need a tool that makes outdoor exploration feel like a game while producing real scientific data.</p>
+      </div>
+      <div>
+        <div class="mono text-xs text-orange-400">GCP-NATIVE</div>
+        <p class="text-sm text-gray-300 mt-2">Full GCP architecture: Cloud Run, Cloud SQL (Postgres), Cloud Storage with lifecycle rules, Eventarc, Cloud Tasks, Cloud Scheduler, Secret Manager, Firebase Auth, Cloud Build, Artifact Registry.</p>
+      </div>
+      <div>
+        <div class="mono text-xs text-orange-400">CHILD SAFETY</div>
+        <p class="text-sm text-gray-300 mt-2">Kids under 13 authenticate via join codes (no email). Async photo moderation via Eventarc triggers. LLMs are author-time only — never exposed to kids at runtime. All external service failures degrade gracefully.</p>
+      </div>
+    </div>
+
+    <div class="divider my-8"></div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h4 class="font-semibold text-lg">Architecture highlights</h4>
+        <ul class="mt-3 space-y-2 text-sm text-gray-300 list-disc list-inside marker:text-orange-400">
+          <li><b>Cloud Run:</b> Stateless FastAPI (uvicorn), three environments (dev scale-to-zero, staging shared, prod min_instances=1 for Postgres pool warmth).</li>
+          <li><b>Async pipelines:</b> Eventarc triggers photo moderation on GCS upload. Cloud Tasks handles iNaturalist submission queue with DLQ + exponential backoff. Cloud Scheduler runs nightly rarity refresh cron.</li>
+          <li><b>Firebase Auth:</b> Custom claims for parent/teacher/kid roles and group membership. Join-code auth for under-13 users (no email, no password recovery).</li>
+          <li><b>Cloud SQL for Postgres:</b> Replaced DynamoDB single-table design. Foreign keys, connection pooling via Auth Proxy, automated backups with point-in-time recovery.</li>
+          <li><b>Observability:</b> Structured JSON logging (structlog) → Cloud Logging. Four monitoring alerts: API 5xx rate, moderation DLQ depth, rarity job duration, iNat submit DLQ depth.</li>
+          <li><b>Secret Manager:</b> All secrets (Firebase SA, iNaturalist creds, API keys) loaded at cold start via pydantic-settings. Never injected as plaintext env vars.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-lg">Stack</h4>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="chip">FastAPI · Python 3.12</span>
+          <span class="chip">Expo (React Native)</span>
+          <span class="chip">Cloud SQL · Postgres</span>
+          <span class="chip">Cloud Run</span>
+          <span class="chip">Cloud Storage (signed URLs)</span>
+          <span class="chip">Eventarc · Cloud Tasks</span>
+          <span class="chip">Cloud Scheduler</span>
+          <span class="chip">Firebase Auth</span>
+          <span class="chip">Secret Manager</span>
+          <span class="chip">Cloud Build · Artifact Registry</span>
+          <span class="chip">Cloud DNS</span>
+          <span class="chip">Pydantic · Mangum</span>
+          <span class="chip">structlog · Cloud Logging</span>
+        </div>
+
+        <h4 class="font-semibold text-lg mt-6">Design invariants</h4>
+        <ul class="mt-3 space-y-2 text-sm text-gray-300 list-disc list-inside marker:text-cyan-400">
+          <li>Observation submission endpoint shape never changes; handlers are additive only</li>
+          <li>Moderation is async — never blocks the hot path</li>
+          <li>Expedition JSON is source of truth; database is a materialized view</li>
+          <li>Leaderboard counters live on membership rows (no read-time aggregation)</li>
+          <li>75–85% test coverage target</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</section>
+
 <!-- HOW I BUILD -->
 <section id="how" class="max-w-6xl mx-auto px-5 py-20">
   <div class="text-xs uppercase tracking-widest text-orange-400 mono">/ how I build</div>
@@ -412,8 +491,8 @@
     </div>
     <div class="card p-5">
       <div class="text-orange-400 mono text-xs">03 · Ship on infra</div>
-      <h4 class="font-semibold mt-1">Docker → Fargate</h4>
-      <p class="text-sm text-gray-300 mt-2">Every repo ends up dockerized with a documented AWS path. Runbooks, CI/CD, seeds. Nothing is "works on my machine."</p>
+      <h4 class="font-semibold mt-1">Docker → AWS / GCP</h4>
+      <p class="text-sm text-gray-300 mt-2">Every repo ends up dockerized with a documented cloud path — Fargate or Cloud Run. Runbooks, CI/CD, seeds. Nothing is "works on my machine."</p>
     </div>
     <div class="card p-5">
       <div class="text-orange-400 mono text-xs">04 · CHANGELOG discipline</div>
@@ -440,7 +519,7 @@
   <div class="grid md:grid-cols-4 gap-6 mt-8 text-sm">
     <div>
       <div class="text-gray-400 mono text-xs mb-2">FRONTEND</div>
-      <div class="flex flex-wrap gap-2"><span class="chip">Next.js 14</span><span class="chip">React 18</span><span class="chip">Vite</span><span class="chip">Tailwind</span><span class="chip">Radix / shadcn</span><span class="chip">Capacitor</span></div>
+      <div class="flex flex-wrap gap-2"><span class="chip">Next.js 14</span><span class="chip">React 18</span><span class="chip">Vite</span><span class="chip">Tailwind</span><span class="chip">Radix / shadcn</span><span class="chip">Capacitor</span><span class="chip">Expo (React Native)</span></div>
     </div>
     <div>
       <div class="text-gray-400 mono text-xs mb-2">BACKEND</div>
@@ -448,7 +527,7 @@
     </div>
     <div>
       <div class="text-gray-400 mono text-xs mb-2">DATA · REAL-TIME</div>
-      <div class="flex flex-wrap gap-2"><span class="chip">Postgres 16</span><span class="chip">pgvector (HNSW)</span><span class="chip">Redis</span><span class="chip">Socket.io</span><span class="chip">WebSocket</span><span class="chip">WebRTC</span></div>
+      <div class="flex flex-wrap gap-2"><span class="chip">Postgres 16</span><span class="chip">pgvector (HNSW)</span><span class="chip">PostGIS</span><span class="chip">DynamoDB</span><span class="chip">Redis</span><span class="chip">Socket.io</span><span class="chip">WebSocket</span><span class="chip">WebRTC</span></div>
     </div>
     <div>
       <div class="text-gray-400 mono text-xs mb-2">ORCHESTRATION</div>
@@ -461,6 +540,10 @@
     <div>
       <div class="text-gray-400 mono text-xs mb-2">AWS</div>
       <div class="flex flex-wrap gap-2"><span class="chip">ECS / Fargate</span><span class="chip">RDS</span><span class="chip">S3</span><span class="chip">CloudFront</span><span class="chip">ECR</span><span class="chip">SQS</span><span class="chip">SES</span><span class="chip">Lambda</span><span class="chip">Bedrock</span><span class="chip">Transcribe</span><span class="chip">ALB</span><span class="chip">Polly</span></div>
+    </div>
+    <div>
+      <div class="text-gray-400 mono text-xs mb-2">GCP</div>
+      <div class="flex flex-wrap gap-2"><span class="chip">Cloud Run</span><span class="chip">Cloud SQL</span><span class="chip">Cloud Storage</span><span class="chip">Eventarc</span><span class="chip">Cloud Tasks</span><span class="chip">Cloud Scheduler</span><span class="chip">Secret Manager</span><span class="chip">Firebase Auth</span><span class="chip">Cloud Build</span><span class="chip">Artifact Registry</span><span class="chip">Cloud DNS</span></div>
     </div>
     <div>
       <div class="text-gray-400 mono text-xs mb-2">INFRA · CI/CD</div>
@@ -513,7 +596,7 @@
 </section>
 
 <footer class="max-w-6xl mx-auto px-5 py-10 text-xs text-gray-500 flex items-center justify-between flex-wrap gap-3">
-  <div>© 2026 Brian Zinkan · <span class="mono">vibe-coded with care</span> · <span class="mono text-gray-600">v1.1</span></div>
+  <div>© 2026 Brian Zinkan · <span class="mono">vibe-coded with care</span> · <span class="mono text-gray-600">v1.2</span></div>
   <div class="flex gap-2"><span class="kbd">ESC</span> to chill</div>
 </footer>
 
